@@ -1,134 +1,264 @@
 <!DOCTYPE html>
-<html lang="ko">
+
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junghye Kim's Personal Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            /* 'Lato' 폰트를 기본으로 사용, 없으면 sans-serif 사용 */
-            font-family: 'Lato', sans-serif;
-            line-height: 1.7;
-            background-color: #f8f9fa; /* 부드러운 배경색 */
-            color: #343a40; /* 가독성 좋은 어두운 회색 */
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 850px;
-            margin: 50px auto;
-            padding: 40px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        h1, h2 {
-            color: #2c3e50; /* 차분한 다크 블루 */
-            border-bottom: 2px solid #e9ecef; /* 부드러운 회색 밑줄 */
-            padding-bottom: 10px;
-        }
-        h1 {
-            font-size: 2.8em;
-            margin-bottom: 0.5em;
-        }
-        h2 {
-            font-size: 1.8em;
-            margin-top: 50px;
-        }
-        p, li {
-            font-size: 1.05em;
-        }
-        a {
-            color: #007bff; /* 선명한 블루 */
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-            color: #0056b3; /* 마우스를 올렸을 때 더 진한 블루 */
-        }
-        .profile {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-        .profile-img {
-            border-radius: 50%;
-            /* 사진 크기를 키움 */
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            margin-right: 40px;
-            /* 부드러운 그림자 효과 추가 */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .profile-info {
-            flex: 1;
-        }
-        .profile-info p {
-            margin: 10px 0;
-        }
-        .links {
-            margin-top: 15px;
-        }
-        .links p {
-            display: inline-block;
-            margin-right: 25px;
-        }
-        .publication-item {
-            margin-bottom: 20px;
-        }
-        .publication-item p {
-            margin: 5px 0;
-        }
-    </style>
-</head>
-<body>
+    <title>Junghye Kim</title>
 
-    <div class="container">
-        <div class="profile">
+```
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --bg: #f7f8fa;
+        --card-bg: #ffffff;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+        --accent: #2563eb;
+        --accent-hover: #1d4ed8;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        line-height: 1.7;
+        background: var(--bg);
+        color: var(--text);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 920px;
+        margin: 56px auto;
+        padding: 48px;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.06);
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 48px;
+    }
+
+    .profile-img {
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid var(--border);
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+    }
+
+    .profile-info {
+        flex: 1;
+    }
+
+    h1 {
+        font-size: 2.7rem;
+        line-height: 1.2;
+        margin: 0 0 16px;
+        letter-spacing: -0.04em;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+        margin: 48px 0 18px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border);
+        letter-spacing: -0.02em;
+    }
+
+    p {
+        margin: 0 0 14px;
+        font-size: 1rem;
+    }
+
+    .contact {
+        color: var(--muted);
+        margin-bottom: 18px;
+    }
+
+    a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    a:hover {
+        color: var(--accent-hover);
+        text-decoration: underline;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+    }
+
+    .links a {
+        display: inline-flex;
+        align-items: center;
+        padding: 7px 13px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        color: var(--text);
+        font-size: 0.95rem;
+        font-weight: 500;
+        background: #ffffff;
+        transition: all 0.15s ease;
+    }
+
+    .links a:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+        text-decoration: none;
+        transform: translateY(-1px);
+    }
+
+    .section {
+        margin-top: 34px;
+    }
+
+    .publication-item {
+        padding: 20px 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .publication-item:last-child {
+        border-bottom: none;
+    }
+
+    .publication-title {
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    .publication-authors {
+        color: var(--muted);
+        margin-bottom: 4px;
+    }
+
+    .publication-venue {
+        color: var(--muted);
+        font-size: 0.95rem;
+        margin-bottom: 0;
+    }
+
+    .note {
+        color: var(--muted);
+        font-size: 0.95rem;
+    }
+
+    @media (max-width: 720px) {
+        .container {
+            margin: 24px auto;
+            padding: 28px 22px;
+            border-radius: 0;
+            border-left: none;
+            border-right: none;
+        }
+
+        .profile {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+    <main class="container">
+        <section class="profile">
             <img src="junghyekim_profile.jpeg" alt="Junghye Kim's profile picture" class="profile-img">
-            <div class="profile-info">
-                <h1>Junghye Kim</h1>
-                <p><strong>Contact:</strong> <a href="mailto:jh0912@korea.ac.kr">jh0912@korea.ac.kr</a></p>
-                <div class="links">
-                    <p><strong><a href="CV.pdf" target="_blank">CV</a></strong></p>
-                    <p><strong><a href="https://scholar.google.com/citations?user=RPQxMJwAAAAJ&hl=ko" target="_blank">Google Scholar</a></strong></p>
-                    <p><strong><a href="https://github.com/junghye01" target="_blank">Github</a></strong></p>
-                </div>
+
+```
+        <div class="profile-info">
+            <h1>Junghye Kim</h1>
+            <p class="contact">
+                <strong>Email:</strong>
+                <a href="mailto:jh0912@korea.ac.kr">jh0912@korea.ac.kr</a>
+            </p>
+
+            <div class="links">
+                <a href="CV.pdf" target="_blank">CV</a>
+                <a href="https://scholar.google.com/citations?user=RPQxMJwAAAAJ&hl=ko" target="_blank">Google Scholar</a>
+                <a href="https://github.com/junghye01" target="_blank">GitHub</a>
             </div>
         </div>
+    </section>
 
+    <section class="section">
         <h2>About Me</h2>
         <p>
-            I'm a M.S. student at Korea University's <a href="https://agi.korea.ac.kr/" target="_blank">AGILAB</a>, currently advised by Prof. Sungwoong Kim and Prof. Sungbin Lim.
+            I'm a M.S. student at Korea University's
+            <a href="https://agi.korea.ac.kr/" target="_blank">AGILAB</a>,
+            currently advised by Prof. Sungwoong Kim and Prof. Sungbin Lim.
         </p>
         <p>
-            I received my B.S. from Dongguk University, where I double-majored in Information & Communication Engineering and Data Science.
+            My research goal is to develop reliable multimodal systems that can reason about complex video scenarios,
+            with a focus on temporal dynamics, causal understanding, and fine-grained human-object interactions.
         </p>
-        <p>
-            My research interests lie in multimodal large language models, particularly unified models for video understanding and generation. I aim to enhance semantic alignment and model reliability to advance intelligent video-based AI systems.
-        </p>
+    </section>
 
+    <section class="section">
         <h2>Publications</h2>
+
         <div class="publication-item">
-            <p><strong>DGU-HAO : A Dataset with Daily Life Objects for Comprehensive 3D Human Action Analysis</strong> (IEEE ACCESS, 2024)</p>
-            <p>Jiho Park, Junghye Kim, Yujung Gil, Dongho Kim</p>
+            <p class="publication-title">
+                <a href="https://arxiv.org/abs/2606.11838" target="_blank">
+                    Plan-and-Verify Video Reward Reasoning with Spatio-Temporal Scene Graph Grounding
+                </a>
+            </p>
+            <p class="publication-authors">
+                Hyomin Kim*, Junghye Kim*, Joanie Hayoun Chung, Yoonjin Oh, Kyungjae Lee, Sungbin Lim, Sungwoong Kim
+            </p>
+            <p class="publication-venue">
+                arXiv preprint, 2026 <span class="note">(* Equal contribution)</span>
+            </p>
         </div>
         <div class="publication-item">
-            <p><strong>APMT : Adaptive Prompt-Matching Technique to enhance your answers</strong> (Korea Software Congress, 2023)</p>
-            <p>Yunji Kim, Junghye Kim*, Yeosol Heo*, Jihie Kim (* : Equal Contribution)</p>
+            <p class="publication-title">
+                <a href="https://doi.org/10.1109/ACCESS.2024.3351888" target="_blank">
+                    DGU-HAO: A Dataset with Daily Life Objects for Comprehensive 3D Human Action Analysis
+                </a>
+            </p>
+            <p class="publication-authors">
+                Jiho Park, Junghye Kim, Yujung Gil, Dongho Kim
+            </p>
+            <p class="publication-venue">
+                IEEE Access, 2024
+            </p>
         </div>
 
-        <h2>Patents</h2>
-        <div class="publication-item">
-            <p><strong>Apparatus and Method of Classifying and Detecting Real-Time Abnormal Behavior Based on Artificial Intelligence</strong> (No. 10-0004987(2024)) (Submitted)</p>
-            <p>Sangsoo Lim, Junghye Kim, Junho Choi, Seunghyeon Jung</p>
-        </div>
-    </div>
+
+    </section>
+</main>
+```
 
 </body>
 </html>
