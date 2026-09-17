@@ -55,6 +55,17 @@
         border-radius: 10px;
         border: 1px solid var(--border);
     }
+    .contact-email {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    }
+    
+    .email-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
 
     .profile-info {
         flex: 1;
@@ -179,6 +190,7 @@
             margin-top: 38px;
         }
     }
+    
 </style>
 
 
@@ -192,13 +204,15 @@
 
         <div class="profile-info">
             <h1>Junghye Kim</h1>
-
-            <p class="contact">
+        
+            <div class="contact contact-email">
                 <strong>Email:</strong>
-                <a href="mailto:jh0912@korea.ac.kr">jh0912@korea.ac.kr</a>
-                <a href="mailto:junghyekim01@gmail.com">junghyekim01@gmail.com</a>
-            </p>
-
+                <div class="email-list">
+                    <a href="mailto:jh0912@korea.ac.kr">jh0912@korea.ac.kr</a>
+                    <a href="mailto:junghyekim01@gmail.com">junghyekim01@gmail.com</a>
+                </div>
+            </div>
+        
             <div class="links">
                 <a href="260617_CV.pdf" target="_blank">CV</a>
                 <a href="https://scholar.google.com/citations?user=RPQxMJwAAAAJ&hl=ko" target="_blank">Google Scholar</a>
